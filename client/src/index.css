@@ -1,0 +1,76 @@
+:root {
+  --lightblue: #195fd7;
+  --activetextcolor: #3b82f6;
+
+  /* background colors light */
+  --primarybgcolor: #ffffff;
+  --secondarybgcolor: #f4f4f6;
+  --tertiarygbcolor: #5c72f9;
+
+  /* background colors dark */
+  --primarybgcolordark: #13141a;
+  --secondarybgcolordark: #21222c;
+  --tertiarygbcolordark: #5c72f9;
+
+  /* Text colors light */
+  --primarytextcolor: #21222c;
+  --secondarytextcolor: #515152;
+  --tertiarytextcolor: #374151;
+
+  /* Text colors dark */
+  --primarytextcolordark: #f4f4f6;
+  --secondarytextcolordark: #ababae;
+  --tertiarytextcolordark: #ffffff;
+
+  /* Download Card Dark*/
+  --downloadcardbgdark: #22222c;
+  --downloadcardtextprimarydark: var(--primarytextcolordark);
+  --downloadcardtextsecondarydark: var(--secondarytextcolordark);
+
+  /* Download Card Light */
+  --downloadcardbgdark: #ebebf0;
+  --downloadcardtextprimarydark: var(--primarytextcolor);
+  --downloadcardtextsecondarydark: var(--secondarytextcolor);
+
+  /* Font sizes */
+  --small: 16px;
+  --medium: 18px;
+  --large: 20px;
+  --xlarge: 24px;
+
+  /* Font weights */
+  --weight: 400;
+  --weight-bold: 700;
+
+  /* Button font */
+  --button-font: Arial, sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  line-height: 1.5;
+  height: 100%;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  padding: 30px 100px;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    var(--lightblue),
+    var(--tertiarygbcolordark)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primarytextcolor);
+}
