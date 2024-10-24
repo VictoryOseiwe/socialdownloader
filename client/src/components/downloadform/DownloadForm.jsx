@@ -23,10 +23,11 @@ export default function DownloadForm({
 
     // Define the base URL patterns for each social media platform
     const patterns = {
-      "/instagram": /^(https?:\/\/)?(www\.)?(instagram\.com\/.+)/,
+      "/instagram": /^(https?:\/\/)?(www\.)?(m\.)?(instagram\.com\/.+)/,
       "/facebook": /^(https?:\/\/)?(www\.)?(m\.)?(web\.)?(facebook\.com\/.+)/, // Web & mobile fb URLs
-      "/tiktok": /^(https?:\/\/)?(www\.)?(tiktok\.com\/.+)/,
-      "/youtube": /^(https?:\/\/)?(www\.)?(youtube\.com\/.+|youtu\.be\/.+)/,
+      "/tiktok": /^(https?:\/\/)?(www\.)?(m\.)?(tiktok\.com\/.+)/,
+      "/youtube":
+        /^(https?:\/\/)?(www\.)?(m\.)?(youtube\.com\/.+|youtu\.be\/.+)/,
     };
 
     // Check if the current route has a corresponding pattern

@@ -44,6 +44,6 @@
 
 @media (max-width: 768px) {
   .socialmedianame {
-    font-size: var(--large);
+    font-size: var(--medium);
   }
 }

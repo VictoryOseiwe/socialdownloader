@@ -37,10 +37,10 @@
   }
 
   .keyfeaturegridfirstitem h2 {
-    font-size: var(--xxlarge);
+    font-size: var(--xlarge);
   }
 
   .keyfeaturegridfirstitem p {
-    font-size: var(--medium);
+    font-size: var(--small);
   }
 }
