@@ -45,9 +45,12 @@ export default function DownloadForm({
     }
 
     try {
-      const response = await axios.post("http://localhost:8080/videoInfo", {
-        URL,
-      });
+      const response = await axios.post(
+        "https://socialdownloaderbackend.onrender.com/videoInfo",
+        {
+          URL,
+        }
+      );
       videoDetails(response.data); // Pass video details to parent component
       setVideoInfo(response.data); // Store video info to show download card
       setURL("");
