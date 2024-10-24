@@ -1,0 +1,23 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.footer p {
+  font-size: var(--small);
+  color: var(--tertiarytextcolor);
+}
+
+.footer h3 {
+  font-size: var(--medium);
+  color: var(--primarytextcolor);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

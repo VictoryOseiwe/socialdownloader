@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./Header.css";
 import {
@@ -16,44 +16,75 @@ import {
 
 export default function Header() {
   const [sidebar, setSideBar] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  function toggleDarkMode() {
+    setDarkMode(!darkMode);
+    if (!darkMode) {
+      document.body.classList.add("darkmode");
+      localStorage.setItem("darkMode", "true"); // Save preference
+    } else {
+      document.body.classList.remove("darkmode");
+      localStorage.setItem("darkMode", "false"); // Save preference
+    }
+  }
 
   function showSideBar() {
     setSideBar(!sidebar);
   }
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("darkMode");
+    if (savedTheme === "true") {
+      setDarkMode(true);
+      document.body.classList.add("darkmode");
+    }
+  }, []);
+
   return (
     <>
-      <div className="nav-container">
-        <Link className="gradient-text" to="/">
-          <span className="logo">socialdown</span>
-        </Link>
-        <div className="nav-link">
-          <NavLink className="link" to="/youtube">
-            {/* <Icon icon={yt} /> */}
-            <span>Youtube</span>
-          </NavLink>
-          <NavLink className="link" to="/facebook">
-            <span>Facebook</span>
-          </NavLink>
-          <NavLink className="link" to="/instagram">
-            <span>Instagram</span>
-          </NavLink>
-          <NavLink className="link" to="/tiktok">
-            <span>Tiktok</span>
-          </NavLink>
-          <NavLink className="link" to="/howto">
-            <span>How to</span>
-          </NavLink>
-          <NavLink className="link" to="/install">
-            <span>Install</span>
-          </NavLink>
-          <Moon size={20} />
-        </div>
-        <div className="naviconcontainer">
-          <div className="iconwrapper">
-            <Moon size={20} />
+      <div className="nav-container-bg">
+        <div className="nav-container">
+          <Link className="gradient-text" to="/">
+            <span className="logo">socialdown</span>
+          </Link>
+          <div className="nav-link">
+            <NavLink className="link" to="/youtube">
+              {/* <Icon icon={yt} /> */}
+              <span>Youtube</span>
+            </NavLink>
+            <NavLink className="link" to="/facebook">
+              <span>Facebook</span>
+            </NavLink>
+            <NavLink className="link" to="/instagram">
+              <span>Instagram</span>
+            </NavLink>
+            <NavLink className="link" to="/tiktok">
+              <span>Tiktok</span>
+            </NavLink>
+            <NavLink className="link" to="/howto">
+              <span>How to</span>
+            </NavLink>
+            <NavLink className="link" to="/install">
+              <span>Install</span>
+            </NavLink>
+            {darkMode ? (
+              <Moon size={20} onClick={toggleDarkMode} />
+            ) : (
+              <Sun onClick={toggleDarkMode} size={20} />
+            )}
           </div>
-          <div className="iconwrapper">
-            <Menu size={20} onClick={showSideBar} className="menu" />
+          <div className="naviconcontainer">
+            <div className="iconwrapper">
+              {darkMode ? (
+                <Moon size={20} onClick={toggleDarkMode} />
+              ) : (
+                <Sun onClick={toggleDarkMode} size={20} />
+              )}
+            </div>
+            <div onClick={showSideBar} className="iconwrapper">
+              <Menu size={20} />
+            </div>
           </div>
         </div>
       </div>

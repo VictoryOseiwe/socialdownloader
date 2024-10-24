@@ -1,17 +1,20 @@
-.nav-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
-  background-color: var(--primarybgcolor);
-  color: var(--primarytextcolor);
+.nav-container-bg {
+  background-color: var(--secondarybgcolor);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   position: sticky;
   top: 0;
   z-index: 100;
   transition: box-shadow 1s ease-in-out;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  color: var(--primarytextcolor);
 }
 
 .logo {
@@ -49,6 +52,7 @@
 .naviconcontainer {
   display: flex;
   gap: 10px;
+  display: none;
 }
 
 .menu {
@@ -64,8 +68,8 @@
     display: none;
   }
 
-  .menu {
-    display: block;
+  .naviconcontainer {
+    display: flex;
   }
 
   .active {

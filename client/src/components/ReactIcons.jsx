@@ -8,6 +8,10 @@ import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { GrInstallOption } from "react-icons/gr";
 import { IoMdMoon } from "react-icons/io";
 import { IoSunny } from "react-icons/io5";
+import { MdOutlineFileDownload } from "react-icons/md";
+import { FaForward } from "react-icons/fa";
+import { IoQrCode } from "react-icons/io5";
+import { IoSettingsOutline } from "react-icons/io5";
 
 // Exporting icons for use in other components
 export const Menu = FiMenu;
@@ -20,3 +24,8 @@ export const Tiktok = SiTiktok;
 export const Question = AiOutlineQuestionCircle;
 export const Install = GrInstallOption;
 export const Sun = IoSunny;
+
+export const Download = MdOutlineFileDownload;
+export const Forward = FaForward;
+export const Quality = IoQrCode;
+export const Settings = IoSettingsOutline;

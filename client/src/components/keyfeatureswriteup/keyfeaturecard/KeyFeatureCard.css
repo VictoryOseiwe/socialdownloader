@@ -1,0 +1,21 @@
+.keyfeaturecardcontainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondarybgcolor);
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.keyfeaturecardcontainer h3 {
+  font-size: var(--large);
+  font-weight: var(--semibold);
+}
+
+.keyfeaturecardcontainer p {
+  font-size: var(--small);
+  color: var(--secondarytextcolor);
+}

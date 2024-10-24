@@ -17,6 +17,8 @@
   --secondarytextcolor: #515152;
   --tertiarytextcolor: #374151;
 
+  --h1textcolor: #2563eb;
+
   /* Text colors dark */
   --primarytextcolordark: #f4f4f6;
   --secondarytextcolordark: #ababae;
@@ -24,27 +26,38 @@
 
   /* Download Card Dark*/
   --downloadcardbgdark: #22222c;
-  --downloadcardtextprimarydark: var(--primarytextcolordark);
+  --downloadcardtextprimarydark: var(--primarytextcolor);
   --downloadcardtextsecondarydark: var(--secondarytextcolordark);
+  --backbtnbackgroundcolordark: var(--primarybgcolor);
 
   /* Download Card Light */
-  --downloadcardbgdark: #ebebf0;
-  --downloadcardtextprimarydark: var(--primarytextcolor);
-  --downloadcardtextsecondarydark: var(--secondarytextcolor);
+  --downloadcardbg: #ebebf0;
+  --downloadcardtextprimary: var(--primarytextcolordark);
+  --downloadcardtextsecondary: var(--secondarytextcolor);
+  --backbtnbackgroundcolor: var(--primarybgcolordark);
 
   /* Font sizes */
   --small: 16px;
   --medium: 18px;
   --large: 20px;
   --xlarge: 24px;
+  --xxlarge: 32px;
+  --xxxlarge: 40px; /* might not use this though */
 
   /* Font weights */
   --weight: 400;
   --semibold: 500;
+  --bold: 600;
   --weight-bold: 700;
 
   /* Button font */
   --button-font: Arial, sans-serif;
+
+  /* light */
+  --headingscolor: var(--primarytextcolor);
+
+  /* dark */
+  --headingscolordark: var(--primarytextcolordark);
 }
 
 html {
@@ -54,17 +67,32 @@ html {
 html,
 body {
   margin: 0;
+  padding: 0;
   line-height: 1.5;
-  height: 100%;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-  padding: 20px 25px;
+  background-color: var(--primarybgcolor);
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 200px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  color: var(--headingscolor);
 }
 
 .gradient-text {
   background: linear-gradient(
     to right,
-    var(--lightblue),
+    var(--h1textcolor),
     var(--tertiarygbcolordark)
   );
   -webkit-background-clip: text;
@@ -90,4 +118,42 @@ a {
   background-color: var(--secondarybgcolor);
   border-radius: 5px;
   transition: background-color 0.5s ease;
+}
+
+input {
+  color: var(--headingscolor);
+}
+
+.notfound {
+  color: var(--h1textcolor);
+  font-size: var(--xxxlarge);
+  font-weight: var(--weight-bold);
+}
+
+body.darkmode {
+  --primarytextcolor: var(--primarytextcolordark);
+  --secondarytextcolor: var(--secondarytextcolordark);
+  --tertiarytextcolor: var(--tertiarytextcolordark);
+  --h1textcolor: var(--tertiarygbcolordark);
+
+  --downloadcardbg: var(--downloadcardbgdark);
+  --downloadcardtextprimary: var(--downloadcardtextprimarydark);
+  --downloadcardtextsecondary: var(--downloadcardtextsecondarydark);
+
+  --primarybgcolor: var(--primarybgcolordark);
+  --secondarybgcolor: var(--secondarybgcolordark);
+
+  --backbtnbackgroundcolor: var(--backbtnbackgroundcolordark);
+
+  --headingscolor: var(--headingscolordark);
+}
+
+@media (max-width: 768px) {
+  .body-container {
+    padding: 20px 50px;
+  }
+
+  .videotitle {
+    font-size: var(--large);
+  }
 }
