@@ -7,14 +7,17 @@ export default function Footer() {
         <div>
           <h3>Disclaimer</h3>
           <p>
-            We are not affiliated or endorsed by Twitter. We do not host any
-            videos or images on our servers. All rights belong to their
-            respective owners.
+            We are not affiliated or endorsed by an social media platform. We do
+            not host any videos or images on our servers. All rights belong to
+            their respective owners.
           </p>
         </div>
         <div>
           <h3>Legal</h3>
-          <p>By using Tweeload to download media you agree to the following.</p>
+          <p>
+            By using socialdownloader to download media you agree to the
+            following.
+          </p>
           <p>Privacy Policy</p>
           <p>Terms of Service</p>
         </div>
