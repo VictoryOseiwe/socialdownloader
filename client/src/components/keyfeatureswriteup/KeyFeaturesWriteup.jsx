@@ -27,13 +27,13 @@ export default function KeyFeaturesWriteup() {
             icon={Download}
           />
           <KeyFeatureCard
-            delay="1400"
+            delay="300"
             title="High-Quality Downloads"
             description="Enjoy high-quality downloads with the option to choose different resolutions."
             icon={Quality}
           />
           <KeyFeatureCard
-            delay="1600"
+            delay="400"
             title="Customizable Settings"
             description="Customize your download settings to fit your preferences and needs."
             icon={Settings}
