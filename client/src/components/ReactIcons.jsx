@@ -12,6 +12,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { FaForward } from "react-icons/fa";
 import { IoQrCode } from "react-icons/io5";
 import { IoSettingsOutline } from "react-icons/io5";
+import { MdHomeFilled } from "react-icons/md";
 
 // Exporting icons for use in other components
 export const Menu = FiMenu;
@@ -24,6 +25,7 @@ export const Tiktok = SiTiktok;
 export const Question = AiOutlineQuestionCircle;
 export const Install = GrInstallOption;
 export const Sun = IoSunny;
+export const Home = MdHomeFilled;
 
 export const Download = MdOutlineFileDownload;
 export const Forward = FaForward;

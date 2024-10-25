@@ -112,7 +112,8 @@
   font-weight: var(--semibold);
   color: var(--tertiarytextcolor);
   font-size: var(--medium);
-  margin-top: 40px;
+  margin-top: 45px;
+  margin-bottom: 60px;
 }
 
 .linkmobile {

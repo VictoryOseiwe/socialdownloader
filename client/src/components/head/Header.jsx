@@ -4,6 +4,7 @@ import "./Header.css";
 import {
   Cancel,
   Facebook,
+  Home,
   Instagram,
   Install,
   Menu,
@@ -102,6 +103,10 @@ export default function Header() {
           <Cancel size={20} onClick={showSideBar} />
         </div>
         <div className="navigation">
+          <NavLink className="linkmobile" to="/">
+            <Home />
+            <span>Home</span>
+          </NavLink>
           <NavLink className="linkmobile" to="/youtube">
             <Youtube />
             <span>Youtube</span>
@@ -127,6 +132,15 @@ export default function Header() {
             <span>Install</span>
           </NavLink>
         </div>
+        <p
+          style={{
+            fontSize: "var(--xsmall)",
+            color: "var(--secondarytextcolor)",
+            textAlign: "center",
+          }}
+        >
+          Courtesy @victoryoseiwe
+        </p>
       </div>
       {sidebar && (
         <div
