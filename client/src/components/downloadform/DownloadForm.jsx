@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./DownloadForm.css";
 import axios from "axios";
 import Swal from "sweetalert2";
+import Typed from "typed.js";
 
 export default function DownloadForm({
   socialMediaName,
@@ -11,6 +12,8 @@ export default function DownloadForm({
 }) {
   const [URL, setURL] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const element = useRef(null);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -61,10 +64,18 @@ export default function DownloadForm({
     }
   }
 
+  useEffect(() => {
+    const typed = new Typed(element.current, {
+      strings: [`${socialMediaName} Video Downloader`],
+      typeSpeed: 70,
+      showCursor: false,
+    });
+  });
+
   return (
     <>
       <div className="downloadformcontainer">
-        <h1 className="socialmedianame">{socialMediaName} Video Downloader</h1>
+        <h1 ref={element} className="socialmedianame"></h1>
         <form action="" className="formcontainer" onSubmit={handleSubmit}>
           <input
             className="textfield"

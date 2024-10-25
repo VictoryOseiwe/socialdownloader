@@ -13,8 +13,13 @@ import {
   Tiktok,
   Youtube,
 } from "../ReactIcons";
+import AOS from "aos";
 
 export default function Header() {
+  AOS.init({
+    duration: 500,
+  });
+
   const [sidebar, setSideBar] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
@@ -43,7 +48,11 @@ export default function Header() {
 
   return (
     <>
-      <div className="nav-container-bg">
+      <div
+        className="nav-container-bg"
+        data-aos="fade-down-right"
+        data-aos-delay="700"
+      >
         <div className="nav-container">
           <Link className="gradient-text" to="/">
             <span className="logo">socialdown</span>
@@ -119,7 +128,14 @@ export default function Header() {
           </NavLink>
         </div>
       </div>
-      {sidebar && <div className="overlay" onClick={showSideBar}></div>}
+      {sidebar && (
+        <div
+          data-aos="fade-down-right"
+          data-aos-delay="700"
+          className="overlay"
+          onClick={showSideBar}
+        ></div>
+      )}
     </>
   );
 }

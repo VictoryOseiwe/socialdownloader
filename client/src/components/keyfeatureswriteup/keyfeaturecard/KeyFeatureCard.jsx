@@ -1,9 +1,18 @@
 import "./KeyFeatureCard.css";
 
-export default function KeyFeatureCard({ title, description, icon: Icon }) {
+export default function KeyFeatureCard({
+  title,
+  description,
+  icon: Icon,
+  delay,
+}) {
   return (
     <>
-      <div className="keyfeaturecardcontainer">
+      <div
+        data-aos="fade-down-right"
+        data-aos-delay={delay}
+        className="keyfeaturecardcontainer"
+      >
         <div>
           {Icon && <Icon style={{ color: "var(--headingscolor)" }} size={30} />}
         </div>

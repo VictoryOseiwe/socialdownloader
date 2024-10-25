@@ -19,3 +19,12 @@
   font-size: var(--small);
   color: var(--secondarytextcolor);
 }
+
+@media (max-width: 768px) {
+  .keyfeaturecardcontainer h3 {
+    font-size: var(--medium);
+  }
+  .keyfeaturecardcontainer p {
+    font-size: var(--xsmall);
+  }
+}
