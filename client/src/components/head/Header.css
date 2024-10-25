@@ -76,6 +76,10 @@
     color: var(--activetextcolor);
     background-color: var(--secondarybgcolor);
   }
+
+  .logo {
+    font-size: var(--large);
+  }
 }
 
 .sidebar {
